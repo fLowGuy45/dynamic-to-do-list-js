@@ -1,4 +1,4 @@
-// Wait until DOM is fully loaded
+/ Wait until DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Select important DOM elements
     const addButton = document.getElementById('add-task-btn');
@@ -44,9 +44,3 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.addEventListener('click', addTask);
 
     // Event listener for Enter key
-    taskInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            addTask();
-        }
-    });
-});
