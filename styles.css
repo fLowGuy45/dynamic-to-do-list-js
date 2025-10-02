@@ -23,6 +23,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 #add-task-btn {
@@ -33,6 +34,7 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 #add-task-btn:hover {
@@ -42,6 +44,7 @@ body {
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 li {
@@ -52,6 +55,12 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .remove-btn {
@@ -61,8 +70,14 @@ li {
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
+    font-size: 12px;
 }
 
 .remove-btn:hover {
     background-color: #d9534f;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
 }
